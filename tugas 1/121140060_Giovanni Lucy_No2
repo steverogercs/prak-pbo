@@ -1,0 +1,51 @@
+'''
+Buatlah program yang dapat menerima inputan username dan password dan user
+sebanyak 3 kali. Jika percobaan Oleh user kurang dari sama dengan 3 kali maka
+berhasil login, jika lebih dari 3 kali maka akun diblokir Dengan username yang
+digunakkan ialah seperti berikut:
+
+username = informatika
+password = 12345678
+
+contoh input dan output program:
+ketika berhasil
+Username anda : informatika
+Password anda : 12345678
+Berhasil login!
+
+ketika gaga!
+Username anda : informa
+Password anda : 1234
+Username atau password salah coba lagi
+Username anda : informatika
+Password anda : 12345678
+Berhasil login!
+'''
+
+
+def main() -> None:
+
+    # constanta username dan password
+    USERNAME = 'informatika'
+    PASSWORD = '12345678'
+
+    # variable jumlah percobaan
+    count = 0
+
+    # loop untuk menerima inputan username dan password
+    while count < 3:
+        username = input('Username anda : ')
+        password = input('Password anda : ')
+
+        # cek apakah username dan password sama dengan constanta
+        if username == USERNAME and password == PASSWORD:
+            print('Berhasil login!')
+            break
+
+        # jika salah maka print pesan kesalahan dan tambah count
+        print('Username atau password salah coba lagi')
+        count += 1
+
+
+if __name__ == '__main__':
+    main()
